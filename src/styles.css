@@ -2,7 +2,9 @@
 @import "react-grid-layout/css/styles.css";
 @import "react-resizable/css/styles.css";
 
-@plugin "daisyui";
+@plugin "daisyui" {
+    themes: all;
+}
 
 .drag-region {
     -webkit-app-region: drag;
