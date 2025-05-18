@@ -2,6 +2,7 @@ name: 'publish'
 
 on:
   release:
+  workflow_dispatch:
 
 jobs:
   publish-tauri:
@@ -48,9 +49,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
-          tagName: app-v__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version.
-          releaseName: 'App v__VERSION__'
-          releaseBody: 'See the assets to download this version and install.'
-          releaseDraft: true
-          prerelease: false
+          releaseId: ${{ github.event.inputs.release_id || github.event.release.id }}
           args: ${{ matrix.args }}
