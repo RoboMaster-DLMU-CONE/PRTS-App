@@ -9,7 +9,7 @@ const appWindow = getCurrentWindow();
 
 function WindowButtons() {
     return (
-        <div className="join">
+        <div className="join no-drag">
             <button className="btn btn-circle btn-ghost" onClick={() => appWindow.minimize()}><BaselineMinus/>
             </button>
             <button className="btn btn-circle btn-ghost" onClick={() => appWindow.toggleMaximize()}>
