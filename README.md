@@ -1,7 +1,15 @@
-# Tauri + React + Typescript
+# Primitive RoboMaster Terminal Service App
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+这是为[one-framework](https://github.com/RoboMaster-DLMU-CONE/one-framework)的`PRTS`系统开发的桌面应用程序
 
-## Recommended IDE Setup
+## 功能一览
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+- 使用虚拟串口连接基于`one-framework`开发的嵌入式应用的`PRTS`模块；
+- 在虚拟`Zephyr Shell`中发送`PRTS`相关指令：
+    - 显示`PRTS`系统中的各项`elements`；
+    - 触发`PRTS`系统中注册的各项`Unit`回调函数。
+
+## Credit
+
+- [tauri](https://github.com/tauri-apps/tauri)
+- [daisyui](https://github.com/saadeghi/daisyui)
