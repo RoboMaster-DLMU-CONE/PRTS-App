@@ -1,7 +1,7 @@
 [package]
 name = "prts"
 version = "0.1.0"
-description = "A Tauri App"
+description = "A Tauri Home"
 authors = ["you"]
 edition = "2021"
 
