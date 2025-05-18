@@ -17,8 +17,9 @@ function Navbar() {
                     <ThemeStore/>
                 </button>
             </div>
-            <div className="navbar-center">
-                <a className="btn btn-ghost text-xl">PRTS</a>
+            <div className="navbar-center text-center gap-2">
+                <span className="status status-success"/>
+                <h1 className="text-xl font-bold font-sans">PRTS</h1>
             </div>
             <div className="navbar-end">
                 <div className="join">

@@ -1,10 +1,10 @@
 import Navbar from "./components/Navbar.tsx";
 import Hero from "./components/Hero.tsx";
-import {useSettings} from "./stores/useSettings.ts"
+import {useSettingsStore} from "./stores/useSettingsStore.ts"
 import {useEffect} from "react";
 
 function Home() {
-    const {showHero, init} = useSettings();
+    const {showHero, init} = useSettingsStore();
     useEffect(() => {
         init();
     }, []);

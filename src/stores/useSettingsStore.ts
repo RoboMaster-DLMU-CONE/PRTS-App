@@ -7,7 +7,7 @@ interface SettingsState {
     init: () => Promise<void>;
 }
 
-export const useSettings = create<SettingsState>()((set) => ({
+export const useSettingsStore = create<SettingsState>()((set) => ({
         showHero: true,
         setShowHero: (show) => set(() => ({showHero: show})),
         init: async () => {
