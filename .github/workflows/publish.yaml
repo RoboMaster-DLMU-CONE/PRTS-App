@@ -1,5 +1,10 @@
 name: 'publish'
 
+permissions:
+  contents: write
+  packages: write
+  actions: write
+
 on:
   push:
     branches:
@@ -50,7 +55,7 @@ jobs:
 
       - uses: tauri-apps/tauri-action@v0
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tagName: PRTS-v__VERSION__
           releaseName: 'PRTS v__VERSION__'
