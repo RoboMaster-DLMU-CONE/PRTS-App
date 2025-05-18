@@ -1,9 +1,10 @@
 name: 'publish'
 
 on:
-  release:
+  push:
+    branches:
+      - release
   workflow_dispatch:
-
 jobs:
   publish-tauri:
     permissions:
@@ -51,5 +52,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
-          releaseId: ${{ github.event.inputs.release_id || github.event.release.id }}
+          tagName: PRTS-v__VERSION__
+          releaseName: 'PRTS v__VERSION__'
+          releaseBody: '可在Assets中找到合适的安装包进行下载'
+          releaseDraft: true
+          prerelease: false
           args: ${{ matrix.args }}
