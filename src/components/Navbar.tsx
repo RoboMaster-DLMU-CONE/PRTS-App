@@ -4,7 +4,7 @@ import ThemeSwitcher from "./ThemeSwitcher.tsx";
 
 function Navbar() {
     return (
-        <div className="m-0 p-0 navbar min-h-5 bg-base-100 shadow-sm drag-region">
+        <div className="fixed top-0 left-0 w-full m-0 p-0 navbar min-h-5 h-8 bg-base-100 shadow-sm drag-region z-50">
             <div className="navbar-start px-2">
                 <ThemeSwitcher/>
             </div>
