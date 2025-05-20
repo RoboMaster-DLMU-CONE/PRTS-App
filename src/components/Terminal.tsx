@@ -1,9 +1,16 @@
+import {useXTerm} from "react-xtermjs";
+
 function Terminal() {
+    const {instance, ref} = useXTerm()
+    instance?.writeln("Hello One Framework!")
+    instance?.onData((data) => instance?.write(data))
     return (
-        <div className="collapse">
-            <input type="checkbox"/>
-            <h2 className="card-title collapse-title">虚拟终端</h2>
-            <p className="collapse-content">$~:prts ls unit</p>
+        <div className="card-body m-0 p-0">
+            <div className="collapse">
+                <input type="checkbox"/>
+                <h2 className="collapse-title card-title">虚拟串口</h2>
+                <div className="collapse-content m-0" ref={ref} style={{width: '100%', height: '100%'}}></div>
+            </div>
         </div>
     );
 }
