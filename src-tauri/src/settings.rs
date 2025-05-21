@@ -10,7 +10,7 @@ pub struct Settings {
 impl Default for Settings {
     fn default() -> Self {
         Settings {
-            theme: "light".into(),
+            theme: "nord".into(),
             show_hero: true,
         }
     }
