@@ -1,10 +1,10 @@
-import Navbar from "./components/Navbar.tsx";
-import Hero from "./components/Hero.tsx";
-import {useSettingsStore} from "./stores/useSettingsStore.ts"
+import Navbar from "../components/Navbar.tsx";
+import Hero from "./Hero.tsx";
+import {useSettingsStore} from "../stores/useSettingsStore.ts"
 import {useEffect} from "react";
-import ToolKit from "./components/ToolKit.tsx";
+import ToolKit from "../components/ToolKit.tsx";
 
-function Home() {
+function RuntimeTerminal() {
     const {showHero, init} = useSettingsStore();
     useEffect(() => {
         init();
@@ -21,4 +21,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default RuntimeTerminal;
