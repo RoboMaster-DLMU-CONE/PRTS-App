@@ -12,7 +12,7 @@ function Hero() {
 
                     <button className="btn btn-primary btn-outline" onClick={() => {
                         setShowHero(false);
-                        navigate("/")
+                        navigate("/runtime")
                     }}>开始演算
                     </button>
                 </div>
