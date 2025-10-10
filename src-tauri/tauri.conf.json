@@ -40,10 +40,6 @@
           "zh-CN"
         ]
       }
-    },
-    "externalBin": [
-      "binaries/linux/rplc",
-      "binaries/windows/rplc.exe"
-    ]
+    }
   }
 }

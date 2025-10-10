@@ -1,5 +1,5 @@
-use serde::{Deserialize, Serialize};
 use confy;
+use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Settings {
@@ -16,11 +16,11 @@ impl Default for Settings {
     }
 }
 #[tauri::command]
-pub fn get_settings()-> Result<Settings, String>{
-    confy::load("prts_app",None).map_err(|e| e.to_string())
+pub fn get_settings() -> Result<Settings, String> {
+    confy::load("prts_app", None).map_err(|e| e.to_string())
 }
 
 #[tauri::command]
-pub fn set_settings(new: Settings) -> Result<(), String>{
-    confy::store("prts_app",None, &new).map_err(|e| e.to_string())
+pub fn set_settings(new: Settings) -> Result<(), String> {
+    confy::store("prts_app", None, &new).map_err(|e| e.to_string())
 }
