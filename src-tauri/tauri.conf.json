@@ -23,6 +23,25 @@
       "csp": null
     }
   },
+  "plugins": {
+    "cli": {
+      "description": "PRTS CLI",
+      "args": [
+        {
+          "short": "v",
+          "name": "verbose",
+          "description": "Verbosity level"
+        },
+        {
+          "name": "config",
+          "short": "c",
+          "takesValue": true,
+          "description": "指定配置文件路径"
+        }
+      ],
+      "subcommands": {}
+    }
+  },
   "bundle": {
     "active": true,
     "publisher": "Dalian Nationalities C·One Studio",
